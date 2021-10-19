@@ -1,5 +1,4 @@
 " Set statusline{{{
-set laststatus=2
 set statusline=
 set statusline+=%{lines#Spaces(1)}
 set statusline+=%{lines#StatuslineGit()}
@@ -24,6 +23,5 @@ set statusline+=%{lines#Spaces(1)}
 
 
 " Set tabline{{{
-set showtabline=2
 set tabline=%!lines#TabStatus()
 "}}}
