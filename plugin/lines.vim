@@ -7,16 +7,15 @@ set statusline+=%{lines#Spaces(1)}
 set statusline+=%{lines#BufferStatus()}
 set statusline+=%=
 set statusline+=%{lines#LineInfo()}
+set statusline+=%{lines#Spaces(1)}
+set statusline+=--
+set statusline+=%{lines#Spaces(1)}
+set statusline+=%{lines#LinePercent()}
+set statusline+=%{lines#Spaces(10)}
 if &rtp =~ 'coc.nvim'
-    set statusline+=%{lines#Spaces(1)}
-    set statusline+=--
-    set statusline+=%{lines#Spaces(1)}
-    set statusline+=%{lines#LinePercent()}
-    set statusline+=%{lines#Spaces(10)}
     set statusline+=%{lines#CocStatus()}
 else
-    set statusline+=%{lines#Spaces(10)}
-    set statusline+=%{lines#LinePercent()}
+    set statusline+=%{filetype}
 endif
 set statusline+=%{lines#Spaces(1)}
 "}}}
