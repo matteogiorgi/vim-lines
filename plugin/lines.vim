@@ -15,7 +15,7 @@ set statusline+=%{lines#Spaces(10)}
 if &rtp =~ 'coc.nvim'
     set statusline+=%{lines#CocStatus()}
 else
-    set statusline+=%{filetype}
+    set statusline+=%{&filetype!=#''?&filetype:'none'}
 endif
 set statusline+=%{lines#Spaces(1)}
 "}}}
